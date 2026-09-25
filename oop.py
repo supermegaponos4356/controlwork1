@@ -1,12 +1,11 @@
 class Person:
     def __init__(self, age):
         self.__age = 0
-        self.set_age(age)
 
     def get_age(self):
         return self.__age
 
-    def set_age(self, age: int):
+    def set_age(self, age):
         if age < 0:
             raise ValueError("Возраст не может быть отрицательным.")
         self.__age = age
@@ -18,22 +17,20 @@ print(person.get_age())
 
 
 class Animal:
-    def __init__(self, name: str):
+    def __init__(self, name):
         self.name = name
-    def speak(self) -> str:
+    def speak(self):
         return "I am an animal"
 class Dog(Animal):
-    def speak(self) -> str:
+    def speak(self):
         return "Woof"
 class Cat(Animal):
-    def speak(self) -> str:
+    def speak(self):
         return "Meow"
 dog = Dog("pes")
 cat = Cat("Kot")
 print(dog.name, dog.speak())
 print(cat.name, cat.speak())
-
-
 
 
 
